@@ -13,7 +13,8 @@ export const ADMIN_ROUTES = [
   {
     path: "/admin/task-board",
     name: "Danh Sách Công Việc",
-    component: TaskBoard
+    component: TaskBoard,
+    exact: true
   }
 ];
 

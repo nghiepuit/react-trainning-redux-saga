@@ -13,6 +13,8 @@ import GlobalLoading from "../../components/GlobalLoading";
 import { ADMIN_ROUTES, ROUTES } from "./../../constants";
 import configureStore, { history } from "./../../redux/configureStore";
 import styles from "./styles";
+import { Route, Redirect } from "react-router-dom";
+import NotFoundPage from "./../NotFoundPage";
 
 const store = configureStore();
 
@@ -53,6 +55,8 @@ class App extends Component {
       <Switch>
         {this.renderAdminRoutes()}
         {this.renderDefaultRoutes()}
+        <Route exact path="/404" component={NotFoundPage} />
+        <Redirect to="/404" />
       </Switch>
     );
     return xhtml;

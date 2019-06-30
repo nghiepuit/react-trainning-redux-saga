@@ -1,7 +1,27 @@
+import { withStyles } from "@material-ui/core/styles";
 import React, { Component } from "react";
+import styles from "./styles";
+import { Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
-export default class NotFoundPage extends Component {
+class NotFoundPage extends Component {
   render() {
-    return <div>404 Page Not Found</div>;
+    const { classes } = this.props;
+    return (
+      <div className={classes.notfoundpage}>
+        <div className={classes.content}>
+          <Typography className={classes.title}>404</Typography>
+          <Typography className={classes.subtitle}>Không Tìm Thấy!</Typography>
+          <Typography variant="caption">
+            Xin lỗi, nhưng trang này không tồn tại.
+          </Typography>
+          <Typography variant="caption">
+            Trở lại trang <Link to="/login">đăng nhập</Link>
+          </Typography>
+        </div>
+      </div>
+    );
   }
 }
+
+export default withStyles(styles)(NotFoundPage);
