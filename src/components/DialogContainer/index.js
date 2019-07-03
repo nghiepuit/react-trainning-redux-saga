@@ -4,18 +4,18 @@ import {
   DialogContent,
   DialogTitle,
   Button
-} from "@material-ui/core";
-import { withStyles } from "@material-ui/styles";
-import React, { Component } from "react";
-import styles from "./styles";
+} from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
+import React, { Component } from 'react';
+import styles from './styles';
 
 class DialogContainer extends Component {
   renderTitle() {
     const { title } = this.props;
     let xhtml = null;
-    if (typeof title === "string") {
+    if (typeof title === 'string') {
       xhtml = title;
-    } else if (typeof title === "function") {
+    } else if (typeof title === 'function') {
       xhtml = title();
     }
     return xhtml;
@@ -24,9 +24,9 @@ class DialogContainer extends Component {
   renderContent() {
     const { content } = this.props;
     let xhtml = null;
-    if (typeof content === "string") {
+    if (typeof content === 'string') {
       xhtml = content;
-    } else if (typeof content === "function") {
+    } else if (typeof content === 'function') {
       xhtml = content();
     }
     return xhtml;
@@ -35,9 +35,9 @@ class DialogContainer extends Component {
   renderAction() {
     const { action, onClose } = this.props;
     let xhtml = null;
-    if (typeof action === "string") {
+    if (typeof action === 'string') {
       xhtml = action;
-    } else if (typeof action === "function") {
+    } else if (typeof action === 'function') {
       xhtml = action();
     } else {
       xhtml = (

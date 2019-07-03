@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
 export default class DefaultLayoutRoute extends Component {
   render() {

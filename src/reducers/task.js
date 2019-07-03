@@ -1,11 +1,12 @@
-import * as types from "./../constants/task";
-import { toastError, toastSuccess } from "../helpers/toastHelper";
+import * as types from '../constants/task';
+import { toastError, toastSuccess } from '../helpers/toastHelper';
+
 const initialState = {
   list: [],
   taskDisplayed: [],
   error: null,
   success: null,
-  keyword: "",
+  keyword: '',
   taskEditing: null,
   showConfirmDeleteTask: false,
   idDeleting: null
@@ -58,7 +59,7 @@ const reducer = (state = initialState, action) => {
     }
     case types.ADD_TASK_SUCCESS: {
       const { data } = action.payload;
-      toastSuccess("Thêm mới thành công");
+      toastSuccess('Thêm mới thành công');
       return {
         ...state,
         list: [data].concat(state.list),
@@ -89,7 +90,7 @@ const reducer = (state = initialState, action) => {
     }
     case types.UPDATE_TASK_SUCCESS: {
       const { data } = action.payload;
-      toastSuccess("Cập nhật thành công");
+      toastSuccess('Cập nhật thành công');
 
       const { list, taskDisplayed } = state;
 
@@ -136,7 +137,7 @@ const reducer = (state = initialState, action) => {
     }
     case types.DELETE_TASK_SUCCESS: {
       const { data } = action.payload;
-      toastSuccess("Xóa thành công");
+      toastSuccess('Xóa thành công');
       return {
         ...state,
         list: state.list.filter(item => item.id !== data.id),

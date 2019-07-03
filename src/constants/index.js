@@ -1,18 +1,18 @@
-import TaskBoard from "../containers/TaskBoard";
-import AdminHomePage from "../containers/AdminHomePage";
-import LoginPage from "../containers/LoginPage";
-import SignupPage from "../containers/SignupPage";
+import TaskBoard from '../containers/TaskBoard';
+import AdminHomePage from '../containers/AdminHomePage';
+import LoginPage from '../containers/LoginPage';
+import SignupPage from '../containers/SignupPage';
 
 export const ADMIN_ROUTES = [
   {
-    path: "/admin",
-    name: "Trang Chủ",
+    path: '/admin',
+    name: 'Trang Chủ',
     exact: true,
     component: AdminHomePage
   },
   {
-    path: "/admin/task-board",
-    name: "Danh Sách Công Việc",
+    path: '/admin/task-board',
+    name: 'Danh Sách Công Việc',
     component: TaskBoard,
     exact: true
   }
@@ -20,13 +20,13 @@ export const ADMIN_ROUTES = [
 
 export const ROUTES = [
   {
-    path: "/login",
-    name: "Đăng Nhập",
+    path: '/login',
+    name: 'Đăng Nhập',
     component: LoginPage
   },
   {
-    path: "/signup",
-    name: "Đăng Ký",
+    path: '/signup',
+    name: 'Đăng Ký',
     component: SignupPage
   }
 ];
@@ -34,15 +34,15 @@ export const ROUTES = [
 export const STATUSES = [
   {
     value: 0,
-    label: "READY"
+    label: 'READY'
   },
   {
     value: 1,
-    label: "INPROGRESS"
+    label: 'INPROGRESS'
   },
   {
     value: 2,
-    label: "COMPLETED"
+    label: 'COMPLETED'
   }
 ];
 
@@ -52,5 +52,5 @@ export const STATUS_CODE = {
   UPDATED: 202
 };
 
-export const API_ENDPOINT = "http://139.180.137.150:3000/api";
-export const AUTHORIZATION_KEY = "TOKEN";
+export const API_ENDPOINT = 'http://139.180.137.150:3000/api';
+export const AUTHORIZATION_KEY = 'TOKEN';

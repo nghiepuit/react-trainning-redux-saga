@@ -1,18 +1,18 @@
-import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import { withStyles } from "@material-ui/styles";
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import DialogContainer from "../DialogContainer";
-import styles from "./styles";
+import { FormControl, InputLabel, MenuItem, Select } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import { withStyles } from '@material-ui/styles';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import DialogContainer from '../DialogContainer';
+import styles from './styles';
 
 class TaskForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
-      description: "",
+      title: '',
+      description: '',
       status: null
     };
   }
@@ -28,8 +28,8 @@ class TaskForm extends Component {
         });
       } else {
         this.setState({
-          title: "",
-          description: "",
+          title: '',
+          description: '',
           status: null
         });
       }
@@ -61,8 +61,8 @@ class TaskForm extends Component {
             value={status}
             onChange={this.handleChange}
             inputProps={{
-              name: "status",
-              id: "age-native-simple",
+              name: 'status',
+              id: 'age-native-simple',
               value: status
             }}
           >
@@ -80,9 +80,9 @@ class TaskForm extends Component {
     let xhtml = null;
     const { taskEditing } = this.props;
     if (taskEditing) {
-      xhtml = "Cập nhật thông tin công việc";
+      xhtml = 'Cập nhật thông tin công việc';
     } else {
-      xhtml = "Thêm mới công việc";
+      xhtml = 'Thêm mới công việc';
     }
     return xhtml;
   };
@@ -124,7 +124,9 @@ class TaskForm extends Component {
     let xhtml = null;
     xhtml = (
       <>
-        <Button color="primary" onClick={onClose} >Close</Button>
+        <Button color="primary" onClick={onClose}>
+          Close
+        </Button>
         <Button type="submit" color="primary" autoFocus>
           Save
         </Button>

@@ -1,8 +1,8 @@
 const styles = theme => ({
   backdrop: {
-    background: "rgba(0,0,0,0.4)",
-    position: "fixed",
-    display: "block",
+    background: 'rgba(0,0,0,0.4)',
+    position: 'fixed',
+    display: 'block',
     left: 0,
     right: 0,
     top: 0,
@@ -10,12 +10,12 @@ const styles = theme => ({
     zIndex: 9999
   },
   iconLoading: {
-    position: "fixed",
-    marginLeft: "auto",
-    marginRight: "auto",
+    position: 'fixed',
+    marginLeft: 'auto',
+    marginRight: 'auto',
     left: 0,
     right: 0,
-    top: "30%",
+    top: '30%',
     width: 200
   }
 });

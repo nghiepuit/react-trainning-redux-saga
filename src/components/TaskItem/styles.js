@@ -1,10 +1,10 @@
 const styles = theme => ({
   cardActions: {
-    alignItems: "center",
-    justifyContent: "flex-end"
+    alignItems: 'center',
+    justifyContent: 'flex-end'
   },
   labelStatus: {
-    textAlign: "right"
+    textAlign: 'right'
   },
   card: {
     marginTop: theme.spacing(2)

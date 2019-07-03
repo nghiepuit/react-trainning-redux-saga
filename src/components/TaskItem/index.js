@@ -1,14 +1,14 @@
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Fab from "@material-ui/core/Fab";
-import Grid from "@material-ui/core/Grid";
-import Icon from "@material-ui/core/Icon";
-import { withStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import React, { Component } from "react";
-import { STATUSES } from "../../constants";
-import styles from "./styles";
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Fab from '@material-ui/core/Fab';
+import Grid from '@material-ui/core/Grid';
+import Icon from '@material-ui/core/Icon';
+import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import React, { Component } from 'react';
+import { STATUSES } from '../../constants';
+import styles from './styles';
 
 class TaskItem extends Component {
   showConfirmDialog = () => {

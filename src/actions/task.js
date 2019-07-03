@@ -1,4 +1,4 @@
-import * as taskConstants from "./../constants/task";
+import * as taskConstants from '../constants/task';
 
 export const fetchListTask = () => ({
   type: taskConstants.FETCH_TASK

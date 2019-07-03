@@ -4,12 +4,12 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: "center",
+    textAlign: 'center',
     color: theme.palette.text.secondary
   },
   container: {
-    display: "flex",
-    flexWrap: "wrap"
+    display: 'flex',
+    flexWrap: 'wrap'
   },
   textField: {
     marginLeft: theme.spacing(),
@@ -20,10 +20,10 @@ const styles = theme => ({
     marginBottom: theme.spacing()
   },
   colorPrimary: {
-    backgroundColor: "#B2DFDB"
+    backgroundColor: '#B2DFDB'
   },
   barColorPrimary: {
-    backgroundColor: "#00695C"
+    backgroundColor: '#00695C'
   },
   progress: {
     margin: theme.spacing(2)

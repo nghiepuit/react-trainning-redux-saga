@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
 class Service {
   constructor() {
-    let service = axios.create({
+    const service = axios.create({
       headers: {}
     });
     service.interceptors.response.use(this.handleSuccess, this.handleError);
@@ -24,7 +24,7 @@ class Service {
   handleError = error => {
     switch (error.response.status) {
       case 401:
-        this.redirectTo(document, "/login");
+        this.redirectTo(document, '/login');
         break;
       default:
         return Promise.reject(error);
@@ -41,27 +41,27 @@ class Service {
 
   post(endpoint, payload) {
     return this.service.request({
-      method: "POST",
+      method: 'POST',
       url: endpoint,
-      responseType: "json",
+      responseType: 'json',
       data: payload
     });
   }
 
   put(endpoint, payload) {
     return this.service.request({
-      method: "PUT",
+      method: 'PUT',
       url: endpoint,
-      responseType: "json",
+      responseType: 'json',
       data: payload
     });
   }
 
   delete(endpoint, payload) {
     return this.service.request({
-      method: "DELETE",
+      method: 'DELETE',
       url: endpoint,
-      responseType: "json",
+      responseType: 'json',
       data: payload
     });
   }

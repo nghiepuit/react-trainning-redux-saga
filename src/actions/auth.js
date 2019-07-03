@@ -1,4 +1,4 @@
-import * as types from "./../constants/auth";
+import * as types from '../constants/auth';
 
 export const signup = (email, password) => ({
   type: types.SIGNUP,

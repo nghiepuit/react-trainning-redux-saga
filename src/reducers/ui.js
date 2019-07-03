@@ -1,4 +1,5 @@
-import * as types from "./../constants/ui";
+import * as types from '../constants/ui';
+
 const initialState = {
   showLoading: false,
   showSidebar: false

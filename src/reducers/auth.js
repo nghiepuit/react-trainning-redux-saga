@@ -1,5 +1,6 @@
-import { toastError, toastSuccess } from "../helpers/toastHelper";
-import * as types from "./../constants/auth";
+import { toastError, toastSuccess } from '../helpers/toastHelper';
+import * as types from '../constants/auth';
+
 const initialState = {};
 
 const reducer = (state = initialState, action) => {
@@ -10,7 +11,7 @@ const reducer = (state = initialState, action) => {
       };
     }
     case types.SIGNUP_SUCCESS: {
-      toastSuccess("Đăng ký thành công");
+      toastSuccess('Đăng ký thành công');
       return {
         ...state
       };
@@ -28,7 +29,7 @@ const reducer = (state = initialState, action) => {
       };
     }
     case types.LOGIN_SUCCESS: {
-      toastSuccess("Đăng nhập thành công");
+      toastSuccess('Đăng nhập thành công');
       return {
         ...state
       };

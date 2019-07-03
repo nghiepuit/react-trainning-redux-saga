@@ -1,8 +1,8 @@
-import { withStyles } from "@material-ui/core/styles";
-import React, { Component } from "react";
-import styles from "./styles";
-import { Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { withStyles } from '@material-ui/core/styles';
+import React, { Component } from 'react';
+import { Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import styles from './styles';
 
 class NotFoundPage extends Component {
   render() {

@@ -1,10 +1,10 @@
 const styles = theme => ({
   container: {
-    display: "flex",
-    flexWrap: "wrap"
+    display: 'flex',
+    flexWrap: 'wrap'
   },
   textField: {
-    width: "30%"
+    width: '30%'
   }
 });
 

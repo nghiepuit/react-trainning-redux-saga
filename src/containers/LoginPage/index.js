@@ -1,17 +1,17 @@
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/styles";
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { bindActionCreators, compose } from "redux";
-import { Field, reduxForm } from "redux-form";
-import * as authActions from "./../../actions/auth";
-import TextField from "./../../components/FormHelper/TextField";
-import styles from "./styles";
-import validate from "./validate";
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/styles';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { bindActionCreators, compose } from 'redux';
+import { Field, reduxForm } from 'redux-form';
+import * as authActions from '../../actions/auth';
+import TextField from '../../components/FormHelper/TextField';
+import styles from './styles';
+import validate from './validate';
 
 class LoginPage extends Component {
   handleSubmitForm = values => {
@@ -23,7 +23,7 @@ class LoginPage extends Component {
         login(email, password);
       }
     } else {
-      console.log("data is not valid");
+      console.log('data is not valid');
     }
   };
 
@@ -83,21 +83,17 @@ class LoginPage extends Component {
   }
 }
 
-const FORM_NAME = "LOGIN";
+const FORM_NAME = 'LOGIN';
 const withForm = reduxForm({
   form: FORM_NAME,
   validate
 });
 
-const mapStateToProps = state => {
-  return {};
-};
+const mapStateToProps = state => ({});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    authActions: bindActionCreators(authActions, dispatch)
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  authActions: bindActionCreators(authActions, dispatch)
+});
 
 const withConnect = connect(
   mapStateToProps,

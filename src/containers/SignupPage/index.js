@@ -1,18 +1,18 @@
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/styles";
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Field, reduxForm } from "redux-form";
-import styles from "./styles";
-import TextField from "./../../components/FormHelper/TextField";
-import Checkbox from "./../../components/FormHelper/Checkbox";
-import validate from "./validate";
-import { compose, bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import * as authActions from "./../../actions/auth";
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/styles';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Field, reduxForm } from 'redux-form';
+import { compose, bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import styles from './styles';
+import TextField from '../../components/FormHelper/TextField';
+import Checkbox from '../../components/FormHelper/Checkbox';
+import validate from './validate';
+import * as authActions from '../../actions/auth';
 
 class SignupPage extends Component {
   handleSubmitForm = values => {
@@ -24,7 +24,7 @@ class SignupPage extends Component {
         signup(email, password);
       }
     } else {
-      console.log("data is not valid");
+      console.log('data is not valid');
     }
   };
 
@@ -97,7 +97,7 @@ class SignupPage extends Component {
   }
 }
 
-const FORM_NAME = "SIGN_UP";
+const FORM_NAME = 'SIGN_UP';
 const withForm = reduxForm({
   form: FORM_NAME,
   validate

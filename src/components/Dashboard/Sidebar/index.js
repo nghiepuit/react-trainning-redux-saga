@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import Drawer from "@material-ui/core/Drawer";
-import { List, ListItem, Typography } from "@material-ui/core";
-import { ADMIN_ROUTES } from "./../../../constants";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles";
-import { NavLink } from "react-router-dom";
+import React, { Component } from 'react';
+import Drawer from '@material-ui/core/Drawer';
+import { List, ListItem, Typography } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
+import { NavLink } from 'react-router-dom';
+import { ADMIN_ROUTES } from '../../../constants';
+import styles from './styles';
 
 class Sidebar extends Component {
   toggleDrawer = value => {
@@ -28,7 +28,7 @@ class Sidebar extends Component {
           {ADMIN_ROUTES.map((item, index) => {
             return (
               <NavLink
-                to={`${item.path ? item.path : ""}`}
+                to={`${item.path ? item.path : ''}`}
                 exact
                 className={classes.menuLink}
                 activeClassName={classes.menuActive}

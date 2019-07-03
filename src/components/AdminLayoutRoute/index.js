@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import { Redirect, Route } from "react-router-dom";
-import { AUTHORIZATION_KEY } from "../../constants";
-import axiosService from "../../services/axiosService";
-import Dashboard from "../Dashboard";
+import React, { Component } from 'react';
+import { Redirect, Route } from 'react-router-dom';
+import { AUTHORIZATION_KEY } from '../../constants';
+import axiosService from '../../services/axiosService';
+import Dashboard from '../Dashboard';
 
 class AdminLayoutRoute extends Component {
   componentWillMount() {
     const token = localStorage.getItem(AUTHORIZATION_KEY);
     if (token) {
-      axiosService.setHeader("Authorization", `Bearer ${token}`);
+      axiosService.setHeader('Authorization', `Bearer ${token}`);
     }
   }
 

@@ -1,23 +1,23 @@
-import { withStyles } from "@material-ui/core";
-import AppBar from "@material-ui/core/AppBar";
-import IconButton from "@material-ui/core/IconButton";
-import InputBase from "@material-ui/core/InputBase";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
-import React, { Component } from "react";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import MoreIcon from "@material-ui/icons/MoreVert";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-import styles from "./styles";
-import { withRouter } from "react-router";
-import { AUTHORIZATION_KEY } from "./../../../constants";
-import axiosService from "./../../../services/axiosService";
+import { withStyles } from '@material-ui/core';
+import AppBar from '@material-ui/core/AppBar';
+import IconButton from '@material-ui/core/IconButton';
+import InputBase from '@material-ui/core/InputBase';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import React, { Component } from 'react';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import MoreIcon from '@material-ui/icons/MoreVert';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+import { withRouter } from 'react-router';
+import styles from './styles';
+import { AUTHORIZATION_KEY } from '../../../constants';
+import axiosService from '../../../services/axiosService';
 
-const menuId = "primary-search-account-menu";
-const mobileMenuId = "primary-search-account-menu-mobile";
+const menuId = 'primary-search-account-menu';
+const mobileMenuId = 'primary-search-account-menu-mobile';
 class Header extends Component {
   state = {
     anchorEl: null,
@@ -54,12 +54,12 @@ class Header extends Component {
 
   handleLogout = () => {
     localStorage.removeItem(AUTHORIZATION_KEY);
-    axiosService.removeHeader("Authorization");
+    axiosService.removeHeader('Authorization');
     const { history } = this.props;
     if (history) {
-      history.push("/login");
+      history.push('/login');
     }
-  }
+  };
 
   renderDesktopMenu() {
     const isMenuOpen = Boolean(this.state.anchorEl);
@@ -67,10 +67,10 @@ class Header extends Component {
     return (
       <Menu
         anchorEl={anchorEl}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         id={menuId}
         keepMounted
-        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
@@ -85,10 +85,10 @@ class Header extends Component {
     return (
       <Menu
         anchorEl={mobileMoreAnchorEl}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         id={mobileMenuId}
         keepMounted
-        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
         open={isMobileMenuOpen}
         onClose={this.handleMobileMenuClose}
       >
@@ -143,7 +143,7 @@ class Header extends Component {
                   root: classes.inputRoot,
                   input: classes.inputInput
                 }}
-                inputProps={{ "aria-label": "Search" }}
+                inputProps={{ 'aria-label': 'Search' }}
               />
             </div>
             <div className={classes.grow} />

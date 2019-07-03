@@ -1,8 +1,8 @@
-import Box from "@material-ui/core/Box";
-import { withStyles } from "@material-ui/styles";
-import React, { Component } from "react";
-import styles from "./styles";
-import TaskItem from "../TaskItem";
+import Box from '@material-ui/core/Box';
+import { withStyles } from '@material-ui/styles';
+import React, { Component } from 'react';
+import styles from './styles';
+import TaskItem from '../TaskItem';
 
 class TaskList extends Component {
   handleShowConfirmDialog = id => {

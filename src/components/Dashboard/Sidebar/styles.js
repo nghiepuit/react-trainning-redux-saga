@@ -1,16 +1,16 @@
 const styles = theme => ({
   drawerPaper: {
-    position: "relative",
+    position: 'relative',
     width: 240,
     maxWidth: 240,
-    height: "100%",
+    height: '100%',
     zIndex: 99
   },
   menuActive: {
     backgroundColor: theme.palette.action.hover
   },
   menuLink: {
-    textDecoration: "none",
+    textDecoration: 'none',
     color: theme.text.default
   }
 });

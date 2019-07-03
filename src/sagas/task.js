@@ -7,7 +7,8 @@ import {
   takeLatest,
   select,
   takeEvery
-} from "redux-saga/effects";
+} from 'redux-saga/effects';
+import _get from 'lodash/get';
 import {
   fetchListTaskFailed,
   fetchListTaskSuccess,
@@ -20,12 +21,11 @@ import {
   deleteTaskSuccess,
   deleteTaskFailed,
   toggleConfirmDeleteTask
-} from "../actions/task";
-import { showLoading, hideLoading } from "../actions/ui";
-import { getList, addTask, updateTask, deleteTask } from "../apis/task";
-import { STATUS_CODE, STATUSES } from "../constants";
-import * as taskTypes from "./../constants/task";
-import _get from "lodash/get";
+} from '../actions/task';
+import { showLoading, hideLoading } from '../actions/ui';
+import { getList, addTask, updateTask, deleteTask } from '../apis/task';
+import { STATUS_CODE, STATUSES } from '../constants';
+import * as taskTypes from '../constants/task';
 
 function* watchFetchListAction() {
   while (true) {
@@ -43,7 +43,7 @@ function* watchFetchListAction() {
         yield put(fetchListTaskFailed(data));
       }
     } catch (error) {
-      const details = _get(error, "response.data.detail", {});
+      const details = _get(error, 'response.data.detail', {});
       yield put(fetchListTaskFailed(details));
     } finally {
       yield delay(1000);
@@ -63,7 +63,7 @@ function* watchCreateTaskAction({ payload }) {
   const { data, status } = resp;
   if (status === STATUS_CODE.CREATED) {
     yield put(addTaskSuccess(data));
-    yield put(filterTask(""));
+    yield put(filterTask(''));
   } else {
     yield put(addTaskFailed(data));
   }
@@ -119,7 +119,7 @@ function* processDeleteTask({ payload }) {
     }
     yield put(hideLoading());
   } else {
-    yield put(deleteTaskFailed("Id không tồn tại"));
+    yield put(deleteTaskFailed('Id không tồn tại'));
   }
 }
 

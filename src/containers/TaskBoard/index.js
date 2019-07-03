@@ -1,19 +1,19 @@
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import { withStyles } from "@material-ui/core/styles";
-import AddIcon from "@material-ui/icons/Add";
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators, compose } from "redux";
-import DialogContainer from "../../components/DialogContainer";
-import SearchBox from "../../components/SearchBox";
-import TaskForm from "../../components/TaskForm";
-import TaskList from "../../components/TaskList";
-import { STATUSES } from "../../constants";
-import { SUCCESS_TYPES } from "../../constants/task";
-import * as taskActions from "./../../actions/task";
-import styles from "./styles";
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import { withStyles } from '@material-ui/core/styles';
+import AddIcon from '@material-ui/icons/Add';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators, compose } from 'redux';
+import DialogContainer from '../../components/DialogContainer';
+import SearchBox from '../../components/SearchBox';
+import TaskForm from '../../components/TaskForm';
+import TaskList from '../../components/TaskList';
+import { STATUSES } from '../../constants';
+import { SUCCESS_TYPES } from '../../constants/task';
+import * as taskActions from '../../actions/task';
+import styles from './styles';
 
 class TaskBoard extends Component {
   constructor(props) {

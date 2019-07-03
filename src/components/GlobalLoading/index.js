@@ -1,11 +1,11 @@
-import { withStyles } from "@material-ui/styles";
-import React, { Component } from "react";
-import styles from "./styles";
-import LoadingIcon from "./../../assets/images/giphy.gif";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { bindActionCreators, compose } from "redux";
-import * as uiActions from "./../../actions/ui";
+import { withStyles } from '@material-ui/styles';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators, compose } from 'redux';
+import LoadingIcon from '../../assets/images/giphy.gif';
+import styles from './styles';
+import * as uiActions from '../../actions/ui';
 
 class GlobalLoading extends Component {
   render() {

@@ -1,12 +1,12 @@
-import { withStyles } from "@material-ui/core";
-import cn from "classnames";
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators, compose } from "redux";
-import * as uiActions from "./../../actions/ui";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import styles from "./styles";
+import { withStyles } from '@material-ui/core';
+import cn from 'classnames';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators, compose } from 'redux';
+import * as uiActions from '../../actions/ui';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import styles from './styles';
 
 class Dashboard extends Component {
   handleToggleSidebar = value => {
