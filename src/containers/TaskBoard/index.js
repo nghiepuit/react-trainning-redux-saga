@@ -64,10 +64,12 @@ class TaskBoard extends Component {
     const { taskActions } = this.props;
     const { setTaskEditing } = taskActions;
     if (setTaskEditing) {
-      setTaskEditing(data);
-      this.setState({
-        openForm: true
-      });
+      this.setState(
+        {
+          openForm: true
+        },
+        () => setTaskEditing(data)
+      );
     }
   };
 
@@ -75,14 +77,16 @@ class TaskBoard extends Component {
     const { openForm } = this.state;
     const { taskEditing } = this.props;
     let xhtml = null;
-    xhtml = (
-      <TaskForm
-        open={openForm}
-        onClose={this.handleClose}
-        onSave={this.handleSave}
-        taskEditing={taskEditing}
-      />
-    );
+    if (openForm) {
+      xhtml = (
+        <TaskForm
+          open={openForm}
+          onClose={this.handleClose}
+          onSave={this.handleSave}
+          taskEditing={taskEditing}
+        />
+      );
+    }
     return xhtml;
   }
 

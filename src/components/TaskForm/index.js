@@ -11,9 +11,9 @@ class TaskForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
-      description: '',
-      status: null
+      title: null,
+      description: null,
+      status: 0
     };
   }
 

@@ -52,5 +52,5 @@ export const STATUS_CODE = {
   UPDATED: 202
 };
 
-export const API_ENDPOINT = 'http://139.180.137.150:3000/api';
+export const API_ENDPOINT = 'http://localhost:3000/api';
 export const AUTHORIZATION_KEY = 'TOKEN';

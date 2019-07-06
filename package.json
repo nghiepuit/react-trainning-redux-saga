@@ -8,13 +8,14 @@
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.4.0",
+    "eslint-config-react-app": "^4.0.1",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
     "react-beautiful-dnd": "^11.0.4",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "2.1.8",
     "react-toastify": "^5.2.1",
     "redux": "^4.0.1",
     "redux-form": "^8.2.4",
@@ -26,6 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint .",
     "prettier": "prettier \"src/**/*.{js,jsx,css}\"",
     "format": "npm run prettier -- --write"
   },
@@ -59,6 +61,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,css}": [
+      "eslint .",
       "npm run format",
       "git add"
     ]

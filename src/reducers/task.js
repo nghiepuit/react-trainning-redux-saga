@@ -54,7 +54,8 @@ const reducer = (state = initialState, action) => {
     case types.ADD_TASK: {
       return {
         ...state,
-        success: null
+        success: null,
+        taskEditing: null
       };
     }
     case types.ADD_TASK_SUCCESS: {

@@ -14,7 +14,12 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'react/jsx-one-expression-per-line': 0,
     'no-shadow': 0,
-    'prettier/prettier': ['error']
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto'
+      }
+    ]
   },
   plugins: ['prettier'],
   env: {
